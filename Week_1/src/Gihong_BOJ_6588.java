@@ -14,8 +14,8 @@ public class Gihong_BOJ_6588 {
 	}
 
 	static void solve(int val) {
-		for (int i = 3; i <= val / 2; i++) {
-			if (!(is_prim[i] && is_prim[val - i])) // 이 if 문 때문에 solve 함수는 O(1)
+		for (int i = 3; i <= val / 2; i++) { // 이 for 문은 O(val)
+			if (!(is_prim[i] && is_prim[val - i])) // 이 if 문은 O(1)
 				continue;
 			System.out.println(val + " = " + i + " + " + (val - i));
 			return;
